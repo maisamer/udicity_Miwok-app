@@ -37,24 +37,31 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(numberIntent);
             }
         });
+        TextView color = findViewById(R.id.color_category);
+        color.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent colorIntent = new Intent(MainActivity.this,ColorsActivity.class);
+                startActivity(colorIntent);
+            }
+        });
+        TextView family = findViewById(R.id.family);
+        family.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent familyIntent = new Intent(MainActivity.this,FamilyActivity.class);
+                startActivity(familyIntent);
+            }
+        });
+        TextView pharses = findViewById(R.id.phrases);
+        pharses.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pharseIntent = new Intent(MainActivity.this,PhrasesActivity.class);
+                startActivity(pharseIntent);
+            }
+        });
     }
 
-    public void foodClick(View view){
-        Intent i=new Intent(this,FoodActivity.class);
-        startActivity(i);
-    }
-
-    public void familyClick(View view){
-        Intent i=new Intent(this,FamilyActivity.class);
-        startActivity(i);
-    }
-    public void colorClick(View view){
-        Intent i=new Intent(this,ColorsActivity.class);
-        startActivity(i);
-    }
-    public void phrasesClick(View view){
-        Intent i=new Intent(this,PhrasesActivity.class);
-        startActivity(i);
-    }
 
 }
